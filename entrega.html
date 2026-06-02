@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrega - GS Store</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <nav class="navbar navbar-expand-lg bg-white border-bottom">
+            <div class="container">
+
+                <a class="navbar-brand fw-bold" href="index.html">
+                    GS Store
+                </a>
+
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarContenido">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarContenido">
+
+                    <ul class="navbar-nav mx-auto">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Inicio</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="catalogo.html">Catálogo</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="search.html">Búsqueda</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="favoritos.html">Favoritos</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link active" href="carrito.html">Carrito</a>
+                        </li>
+
+                    </ul>
+
+                    <form class="d-flex" action="search.html">
+                        <input class="form-control me-2" type="search" placeholder="Buscar productos">
+                        <button class="btn btn-dark" type="submit">Buscar</button>
+                    </form>
+
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+
+        <!-- BREADCRUMB -->
+        <section class="py-3" style="background-color: #efe3f5;">
+            <div class="container">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb mb-0">
+                        <li class="breadcrumb-item">
+                            <a href="index.html">Inicio</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="carrito.html">Carrito</a>
+                        </li>
+                        <li class="breadcrumb-item">
+                            <a href="facturacion.html">Facturación</a>
+                        </li>
+                        <li class="breadcrumb-item active">
+                            Entrega
+                        </li>
+                    </ol>
+                </nav>
+            </div>
+        </section>
+
+        <!-- ENCABEZADO -->
+        <section class="py-5 bg-light">
+            <div class="container text-center">
+                <h1 class="fw-bold mb-3">
+                    Datos de entrega
+                </h1>
+
+                <p class="lead">
+                    Indica dónde y cómo deseas recibir tus productos.
+                </p>
+            </div>
+        </section>
+
+        <!-- FORMULARIO ENTREGA -->
+        <section class="py-5">
+            <div class="container">
+
+                <div class="row g-4">
+
+                    <!-- FORMULARIO -->
+                    <div class="col-lg-8">
+
+                        <div class="card p-4">
+
+                            <h3 class="mb-4">
+                                <i class="fa-solid fa-truck me-2"></i>
+                                Dirección de entrega
+                            </h3>
+
+                            <form>
+
+                                <div class="row">
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="provincia" class="form-label fw-bold">
+                                            Provincia
+                                        </label>
+                                        <select class="form-select" id="provincia" required>
+                                            <option selected disabled>Seleccione una provincia</option>
+                                            <option>San José</option>
+                                            <option>Alajuela</option>
+                                            <option>Cartago</option>
+                                            <option>Heredia</option>
+                                            <option>Guanacaste</option>
+                                            <option>Puntarenas</option>
+                                            <option>Limón</option>
+                                        </select>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="canton" class="form-label fw-bold">
+                                            Cantón
+                                        </label>
+                                        <input type="text" class="form-control" id="canton"
+                                            placeholder="Ej. Pérez Zeledón" required>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="distrito" class="form-label fw-bold">
+                                            Distrito
+                                        </label>
+                                        <input type="text" class="form-control" id="distrito"
+                                            placeholder="Ej. San Isidro" required>
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="codigoPostal" class="form-label fw-bold">
+                                            Código postal
+                                        </label>
+                                        <input type="text" class="form-control" id="codigoPostal"
+                                            placeholder="Ej. 11901">
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+                                        <label for="direccion" class="form-label fw-bold">
+                                            Dirección exacta
+                                        </label>
+                                        <textarea class="form-control" id="direccion" rows="4"
+                                            placeholder="Ej. 200 metros norte de la escuela, casa color blanco con portón negro."
+                                            required></textarea>
+                                    </div>
+
+                                    <div class="col-12 mb-3">
+                                        <label for="referencia" class="form-label fw-bold">
+                                            Punto de referencia
+                                        </label>
+                                        <input type="text" class="form-control" id="referencia"
+                                            placeholder="Ej. Cerca del supermercado principal">
+                                    </div>
+
+                                </div>
+
+                                <hr class="my-4">
+
+                                <h4 class="mb-3">
+                                    Tipo de entrega
+                                </h4>
+
+                                <div class="row">
+
+                                    <div class="col-md-4 mb-3">
+                                        <div class="form-check delivery-option">
+                                            <input class="form-check-input" type="radio" name="entrega" id="estandar" checked>
+                                            <label class="form-check-label" for="estandar">
+                                                <strong>Estándar</strong>
+                                                <br>
+                                                <span>2 a 4 días hábiles</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <div class="form-check delivery-option">
+                                            <input class="form-check-input" type="radio" name="entrega" id="express">
+                                            <label class="form-check-label" for="express">
+                                                <strong>Express</strong>
+                                                <br>
+                                                <span>24 a 48 horas</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-4 mb-3">
+                                        <div class="form-check delivery-option">
+                                            <input class="form-check-input" type="radio" name="entrega" id="retiro">
+                                            <label class="form-check-label" for="retiro">
+                                                <strong>Retiro en tienda</strong>
+                                                <br>
+                                                <span>Sin costo adicional</span>
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="row mt-3">
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="fecha" class="form-label fw-bold">
+                                            Fecha preferida
+                                        </label>
+                                        <input type="date" class="form-control" id="fecha">
+                                    </div>
+
+                                    <div class="col-md-6 mb-3">
+                                        <label for="horario" class="form-label fw-bold">
+                                            Horario preferido
+                                        </label>
+                                        <select class="form-select" id="horario">
+                                            <option selected>Seleccionar horario</option>
+                                            <option>8:00 a.m. - 12:00 m.d.</option>
+                                            <option>12:00 m.d. - 4:00 p.m.</option>
+                                            <option>4:00 p.m. - 7:00 p.m.</option>
+                                        </select>
+                                    </div>
+
+                                </div>
+
+                                <div class="alert alert-light border mt-3">
+                                    <i class="fa-solid fa-shield-halved me-2"></i>
+                                    Tus datos serán utilizados únicamente para coordinar la entrega del pedido.
+                                </div>
+
+                                <div class="d-flex justify-content-between mt-4">
+
+                                    <a href="facturacion.html" class="btn btn-outline-dark">
+                                        Volver a facturación
+                                    </a>
+
+                                    <button type="button" class="btn btn-dark" data-bs-toggle="modal"
+                                        data-bs-target="#modalPedido">
+                                        Confirmar pedido
+                                    </button>
+
+                                </div>
+
+                            </form>
+
+                        </div>
+
+                    </div>
+
+                    <!-- RESUMEN -->
+                    <div class="col-lg-4">
+
+                        <div class="card p-4 resumen-compra">
+
+                            <h4 class="mb-4">
+                                Resumen final
+                            </h4>
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Subtotal</span>
+                                <span>₡1,190,000</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Impuestos 13%</span>
+                                <span>₡154,700</span>
+                            </div>
+
+                            <div class="d-flex justify-content-between mb-3">
+                                <span>Envío</span>
+                                <span>₡5,000</span>
+                            </div>
+
+                            <hr>
+
+                            <div class="d-flex justify-content-between fw-bold fs-5 mb-4">
+                                <span>Total</span>
+                                <span>₡1,349,700</span>
+                            </div>
+
+                            <div class="small text-muted">
+                                <p class="mb-2">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Compra segura
+                                </p>
+
+                                <p class="mb-2">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Garantía incluida
+                                </p>
+
+                                <p class="mb-0">
+                                    <i class="fa-solid fa-check me-2"></i>
+                                    Soporte por WhatsApp
+                                </p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- MODAL ÉXITO -->
+    <div class="modal fade" id="modalPedido" tabindex="-1" aria-hidden="true">
+
+        <div class="modal-dialog modal-dialog-centered">
+
+            <div class="modal-content">
+
+                <div class="modal-body text-center p-5">
+
+                    <div class="success-icon mb-3">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+
+                    <h3 class="fw-bold">
+                        Pedido confirmado
+                    </h3>
+
+                    <p class="text-muted">
+                        Gracias por comprar en GS Store. Pronto recibirás la confirmación de tu pedido.
+                    </p>
+
+                    <a href="index.html" class="btn btn-dark mt-3">
+                        Volver al inicio
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer-custom text-white py-5">
+
+        <div class="container">
+
+            <div class="row">
+
+                <div class="col-md-4 mb-4">
+                    <h5>GS Store</h5>
+                    <p>
+                        Tienda virtual especializada en celulares y accesorios tecnológicos.
+                    </p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Contacto</h5>
+                    <p>Email: info@gsstore.com</p>
+                    <p>Teléfono: +506 8888-8888</p>
+                </div>
+
+                <div class="col-md-4 mb-4">
+                    <h5>Redes Sociales</h5>
+                    <p><i class="fa-brands fa-facebook"></i> Facebook</p>
+                    <p><i class="fa-brands fa-instagram"></i> Instagram</p>
+                    <p><i class="fa-brands fa-tiktok"></i> TikTok</p>
+                </div>
+
+            </div>
+
+            <div class="text-center border-top pt-3 mt-3">
+                <p class="mb-0">
+                    © 2026 GS Store - Todos los derechos reservados
+                </p>
+            </div>
+
+        </div>
+
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
