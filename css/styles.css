@@ -52,6 +52,10 @@ body {
     transform: translateY(-2px);
 }
 
+.btn-outline-dark {
+    border-radius: 14px;
+}
+
 /* CARDS */
 
 .card {
@@ -68,15 +72,24 @@ body {
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
 }
 
-.card img {
+/* IMPORTANTE:
+   Esto aplica solo a imágenes normales de cards,
+   no a las imágenes del panel administrativo.
+*/
+
+.card img:not(.admin-product-img) {
     height: 180px;
     object-fit: cover;
+    object-position: center;
 }
+
+/* IMAGEN GRANDE DEL PRODUCTO */
 
 .product-image {
     max-height: 450px;
     width: 100%;
     object-fit: cover;
+    object-position: center;
     border-radius: 20px;
 }
 
@@ -109,8 +122,6 @@ section {
 .list-group-item:hover {
     background-color: #eaddee;
 }
-
-/* FOOTER */
 
 /* FOOTER */
 
@@ -161,6 +172,152 @@ h5 {
     color: #222;
 }
 
+/* FORMULARIOS DE COMPRA */
+
+.form-control,
+.form-select {
+    border-radius: 14px;
+    padding: 12px 15px;
+    border: 1px solid #d8c7dc;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #8b5e8a;
+    box-shadow: 0 0 0 0.2rem rgba(139, 94, 138, 0.18);
+}
+
+.payment-option,
+.delivery-option {
+    background-color: #f9f5fb;
+    border: 1px solid #e1d1e6;
+    border-radius: 18px;
+    padding: 16px;
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.payment-option:hover,
+.delivery-option:hover {
+    background-color: #efe3f5;
+    transform: translateY(-3px);
+}
+
+.delivery-option span {
+    color: #666;
+    font-size: 14px;
+}
+
+.resumen-compra {
+    position: sticky;
+    top: 25px;
+}
+
+.success-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #5b3b5a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 35px;
+}
+
+.modal-content {
+    border-radius: 25px;
+    border: none;
+}
+
+/* PANEL ADMINISTRATIVO */
+
+.admin-sidebar {
+    position: sticky;
+    top: 25px;
+}
+
+.admin-avatar {
+    width: 80px;
+    height: 80px;
+    background-color: #5b3b5a;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 32px;
+}
+
+.active-admin {
+    background-color: #5b3b5a !important;
+    color: white !important;
+}
+
+.admin-stat-card {
+    height: 100%;
+}
+
+.stat-icon {
+    width: 55px;
+    height: 55px;
+    background-color: #efe3f5;
+    color: #5b3b5a;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+}
+
+.admin-table th {
+    color: #5b3b5a;
+    font-weight: bold;
+    border-bottom: 2px solid #ead8ec;
+}
+
+.admin-table td {
+    vertical-align: middle;
+}
+
+/* IMÁGENES DEL PANEL ADMINISTRATIVO */
+
+.admin-table .admin-product-img {
+    width: 75px !important;
+    height: 75px !important;
+    min-width: 75px;
+    max-width: 75px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 14px;
+    margin-right: 12px;
+    display: block;
+    flex-shrink: 0;
+}
+
+.cancel-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #f8d7da;
+    color: #b02a37;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    font-size: 35px;
+}
+
+.modal-header {
+    border-bottom: 1px solid #ead8ec;
+}
+
+.modal-footer {
+    border-top: 1px solid #ead8ec;
+}
+
 /* RESPONSIVE */
 
 @media (max-width: 768px) {
@@ -182,6 +339,18 @@ h5 {
 
     .d-flex {
         margin-top: 15px;
+    }
+
+    .resumen-compra,
+    .admin-sidebar {
+        position: static;
+    }
+
+    .admin-table .admin-product-img {
+        width: 65px !important;
+        height: 65px !important;
+        min-width: 65px;
+        max-width: 65px;
     }
 
 }
